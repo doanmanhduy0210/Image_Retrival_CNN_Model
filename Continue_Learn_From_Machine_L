@@ -1,0 +1,82 @@
+--------------------------------------------------------------------------------------Ngày 14/04/2020 (12h.07p +7)---------------------------------------------------------------------------------------- 
+Tìm hiểu thêm về adjust Learning rate 
+three types of Gradient Descent: 
+Batch Gradient Descent:
+
+duyệt qua một Batch(toàn bộ điểm dữ liệu ) cập nhật một lần . 
+ưu điểm : ít noise. 
+nhc điểm: với online leaning hoặc large data set thì mất nhiều thời gian. 
+
+Stochastic Gradient Descent: 
+concept:dữ liệu được xáo trộn, mỗi lần duyệt qua một epochs (ứng với toàn bộ DL ) nó sẽ cập nhật N điểm (N số điểm DL) sau một vài epochs thu được nghiệm tốt.
+
+Tối ưu hơn Batch_GD là SGD có tốc độ nhanh hơn trên hurge dataset 
+
+SGD is generally noisier than typical Gradient Descent
+
+Mini-batch Gradient Descent
+
+concept: xáo trộn và chia toàn bộ DL thành các mini batch. (giả sử có N data point) và mini batch cuối cùng (có nhỏ hơn N data point), mỗi lần cập nhật sẽ lấy ra 1 mini_batch ra đạo hàm. 
+
+adam: Adam can be looked at as a combination of RMSprop and Stochastic Gradient Descent with momentum. It uses the squared gradients to scale the learning rate like RMSprop and it takes advantage of momentum by using moving average of the gradient instead of gradient itself like SGD with momentum. 
+
+Sequential augmentation data
+
+https://github.com/shedvarod/data-augmentation
+
+https://github.com/shedvarod/data-augmentation/blob/master/mnist_sequence_generator.py
+
++ handing imbalance data
+
+Extreme Gradient Boosting (XGBoost)  
+
+https://ongxuanhong.wordpress.com/2017/12/21/xgboost-thuat-toan-gianh-chien-thang-tai-nhieu-cuoc-thi-kaggle/
+
+Use the right evaluation metrics
+
+Resample the training set
+
+Under-sampling
+
+ Over-sampling
+
+Use K-fold Cross-Validation in the right way
+
+Ensemble different resampled datasets
+
+Resample with different ratios
+
+Cluster the abundant class
+
+Design your own models
+
+cost(g) Function, loss(mất mát) Function, reward(thưởng) Function (reinforcement learning) 
+lưu ý : dùng Metris là MSE (mean square error)  đánh giá MSE cao thì ít đúng và ngc lại đối với rare(hiếm) class. trong việc áp dụng đánh phạt dự đoán sai rare class.  
+ 
+
++ class weight:  
+
+https://towardsdatascience.com/working-with-highly-imbalanced-datasets-in-machine-learning-projects-c70c5f2a7b16 
+
+https://github.com/msahamed/handle_imabalnce_class/blob/master/imbalance_datasets_machine_learning.ipynb
+
+https://www.youtube.com/watch?v=Kp31wfHpG2c
+
+focal loss
+
+
+Feature engineering 
+
+
+
+Feature distribution
+concept: The distribution of a feature over its range, with value on the horizontal axis and frequency on the vertical axis
+
+m: The feature distribution helps in understanding what kind of feature you are dealing with, and what values you can expect this feature to have. You’ll see if the values are centered or scattered.
+Why is the distribution important? Because deep learning models learn from data. Give them incorrect data and they will learn incorrectly. A deep learning model is only as good as the data you feed it.
+
+Normal distribution
+
+concept: If a feature can be seen as a random variable, and enough data is used and the bins are narrow enough, the look of the distribution could be bell-shaped. This is called a normal distribution (or standard/Gaussian).
+meaning: The normal distribution is a very important probability distribution that arises in many situations. Generally speaking, when you have a large number of independent samples from a naturally occurring phenomenon, the data will follow a normal distribution.
+
